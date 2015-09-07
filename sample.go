@@ -405,7 +405,7 @@ func NewUniformSample(reservoirSize int) Sample {
 	}
 	return &UniformSample{
 		reservoirSize: reservoirSize,
-		values:        make([]int64, 0, reservoirSize),
+		values:        make([]int64, 0, 0),
 	}
 }
 
@@ -414,7 +414,7 @@ func (s *UniformSample) Clear() {
 	s.mutex.Lock()
 	defer s.mutex.Unlock()
 	s.count = 0
-	s.values = make([]int64, 0, s.reservoirSize)
+	s.values = make([]int64, 0, 0)
 }
 
 // Count returns the number of samples recorded, which may exceed the
