@@ -2,7 +2,7 @@ package main
 
 import (
 	"errors"
-	"github.com/lacework/go-metrics"
+	"github.com/lacework-dev/go-metrics"
 	// "github.com/rcrowley/go-metrics/stathat"
 	"log"
 	"math/rand"
